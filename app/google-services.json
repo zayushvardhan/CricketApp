@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "289022367428",
+    "firebase_url": "https://crizbuzz.firebaseio.com",
+    "project_id": "crizbuzz",
+    "storage_bucket": "crizbuzz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289022367428:android:1b14ad880616d773",
+        "android_client_info": {
+          "package_name": "com.example.cricketapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289022367428-qimbc304bchido67lsn2617ou5jocb32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPC6_7VspDFhaikfD08v2EKpAKSRQxL1s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289022367428-qimbc304bchido67lsn2617ou5jocb32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

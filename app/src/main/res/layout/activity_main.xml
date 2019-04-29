@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5sp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="650px"
+        android:padding="2sp"
+        android:orientation="horizontal"
+        android:layout_gravity="top"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_margin="2sp"
+            android:layout_width="650px"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:hint="Username.."
+
+                android:textSize="12sp"/>
+
+            <EditText
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+
+                android:hint="Password.."
+                android:textSize="12sp"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="userLogin"
+                android:text="login"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="#FF0000EF"/>
+
+        <LinearLayout
+            android:layout_margin="2sp"
+            android:layout_width="200sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Live Matches: "/>
+
+                <TextView
+                    android:id="@+id/matches_loading"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading.. "/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/common_dashboard"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:dividerHeight="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"
+        android:padding="3sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:paddingBottom="2dp"
+            android:text="Chat Room"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+        </ProgressBar>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:stackFromEnd ="true"
+            app:reverseLayout="true"
+            android:focusableInTouchMode="true"
+            android:layout_weight="1">
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/linLayout_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/editText_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Type to compose"
+                android:inputType="text"
+                android:imeOptions="actionSend"
+            />
+
+            <ImageButton
+
+                android:id="@+id/imageButton_send"
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Send"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                app:srcCompat="@android:drawable/ic_menu_send"
+                android:layout_weight="0.06"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
